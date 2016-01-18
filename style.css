@@ -1,0 +1,35 @@
+.outside{
+   border-radius: 50%;
+   border-width: 3px;
+   width: 800px;
+   height: 300px;
+   display: inline-block;
+   margin-left: auto;
+   position: relative;
+}
+
+#green {
+   background-color: green;
+   width: 150px;
+   height: 150px;
+}
+
+#red {
+   background-color: red;
+   width: 150px;
+   height: 150px;
+}
+
+#yellow {
+   background-color: yellow;
+   width: 150px;
+   height: 150px;
+}
+
+
+
+#blue {
+   background-color: blue;
+   width: 150px;
+   height: 150px;
+}
