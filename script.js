@@ -23,30 +23,35 @@ $(document).ready(function(){
       if(game.on_off){
          gameOrder();
       }
-   })
+   });
 
    function gameOrder(){
-      console.log(game.computerSerie);
-      // console.log(game.humanSerie);
-      // console.log(game.turn)
+      // writes the number of rounds the user got right
       document.getElementById("turn").innerHTML = game.round;
 
       if(game.turn === 0){
-         startGame();
+         computerRound();
          animate(game.computerSerie);
          gameOrder();
 
       } else if(game.turn % 2 !== 0){
+         
+         var compLenght = game.computerSerie.length;
+         var humanLength = game.humanSerie.length;
+         var i = 0;
+
+         if(humanLength < compLenght){
 
          // this gets the value the user clicked on the element (1 = green / 2 = red / 3 = yellow / 4 = blue)
-         $(".square").click(function(e){
+            $(".square").click(function(e){
                e.stopImmediatePropagation();
-               console.log("I fired.")
+               // console.log("I fired.")
                var squareNum = $(this).data("title");
                var squareId = event.target.id;
 
                game.humanSerie.push(squareNum);
 
+               // calls the ligthUp and playSound functions according to the number of the square
                switch (squareNum){
                   case 1:
                      lightUp(squareNum);
@@ -66,12 +71,8 @@ $(document).ready(function(){
                      break;
                }
 
-               var compLenght = game.computerSerie.length;
-               var humanLength = game.humanSerie.length;
-               var i = 0
-
-               console.log(compLenght);
-               console.log(game.humanSerie)
+               compLenght = game.computerSerie.length;
+               humanLength = game.humanSerie.length;
 
                // checks if the human got the same serie that the computer had
                if(game.humanSerie[i] === game.computerSerie[i]){
@@ -80,35 +81,28 @@ $(document).ready(function(){
                      game.humanSerie = [];
                      game.turn++
                      gameOrder();
+                     i = 0;
                   }
-               } else {
+               } else if(game.humanSerie[i] !== game.computerSerie[i]) {
+                  game.computerSerie = [];
+                  game.humanSerie = [];
                   game.round = 0;
                   game.turn = 0;
-                  game.humanSerie = [];
-                  game.computerSerie = [];
                   gameOrder();
                }
-         });
-
+            }); 
+         }
       } else {
          game.round++
          animate(game.computerSerie);
-         nextRound();
+         computerRound();
          gameOrder();
       }
    }
 })
 
-// stars the game off
-function startGame(){
-   var random = Math.floor(Math.random() * 4) + 1;
-   game.computerSerie.push(random);
-   // animate(game.computerSerie);
-   game.turn++
-}
-
-// as soon as the animation from previous numbers ends it starts
-function nextRound(){
+// gives random value to the computerSerie array
+function computerRound(){
    var random = Math.floor(Math.random() * 4) + 1;
    game.computerSerie.push(random);
    game.turn++
