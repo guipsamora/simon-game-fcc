@@ -1,35 +1,54 @@
+h1 {
+   font-size: 50px;
+   margin: 0 auto;
+   text-align: center;
+}
+
 .outside{
    border-radius: 50%;
    border-width: 3px;
-   width: 800px;
+   width: 1264px;
    height: 300px;
    display: inline-block;
    margin-left: auto;
    position: relative;
+   margin: 0 auto;
+   position: relative;
+   text-align: center;
 }
 
 #green {
+   display: inline-block;
    background-color: green;
    width: 150px;
    height: 150px;
+   opacity: 0.4; 
 }
 
 #red {
+   display: inline-block;
    background-color: red;
    width: 150px;
    height: 150px;
+   opacity: 0.4; 
 }
 
 #yellow {
+   display: inline-block;
    background-color: yellow;
    width: 150px;
    height: 150px;
+   opacity: 0.4; 
 }
 
-
-
 #blue {
+   display: inline-block;
    background-color: blue;
    width: 150px;
    height: 150px;
+   opacity: 0.4; 
+}
+
+.light {
+   opacity: 1 !important;
 }

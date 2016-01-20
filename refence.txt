@@ -25,19 +25,22 @@ User Story: I can win the game by getting a series of 20 steps correct. I am not
 To Do 
 
 
-- create strict button mode
-- create start button
 - keep score of how many series were right
-- when the button is clicked play the sound as well
-- play the sound for each button
-- walk through each of the serie 
+
+- if the user got the serie right, add one more to the serie
 
 
 
 Doing
 
-- if the user got the serie right, add one more to the serie
+
 
 Done
 
+- walk through each of the serie number 
+- Create game order
+- create strict button mode
+- create start button
+- play the sound for each button
+- when the button is clicked play the sound as well
 - Create function that makes the serie
