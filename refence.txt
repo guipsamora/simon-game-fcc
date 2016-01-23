@@ -1,6 +1,8 @@
 Links
 http://www.freecodecamp.com/challenges/build-a-simon-game
 http://codepen.io/Em-Ant/full/QbRyqq/
+http://guipsamora.github.io/simon-game-fcc/
+
 
 
 User Stories
@@ -24,11 +26,9 @@ User Story: I can win the game by getting a series of 20 steps correct. I am not
 
 To Do 
 
-
-- keep score of how many series were right
-
-- if the user got the serie right, add one more to the serie
-
+- create strict mode (add to the if/else statement)
+- deixar bordar escuras
+- ajustar o dashboard
 
 
 Doing
@@ -37,6 +37,8 @@ Doing
 
 Done
 
+- keep score of how many series were right
+- if the user got the serie right, add one more to the serie
 - walk through each of the serie number 
 - Create game order
 - create strict button mode

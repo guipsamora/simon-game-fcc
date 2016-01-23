@@ -44,7 +44,7 @@ $(document).ready(function(){
 
          // this gets the value the user clicked on the element (1 = green / 2 = red / 3 = yellow / 4 = blue)
             $(".square").click(function(e){
-               e.stopImmediatePropagation();
+                e.stopImmediatePropagation();
                // console.log("I fired.")
                var squareNum = $(this).data("title");
                var squareId = event.target.id;

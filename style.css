@@ -23,7 +23,7 @@ h1 {
    background-color: green;
    width: 150px;
    height: 150px;
-   background: rgba(0, 255, 0, 0.2);
+   background: rgba(0, 204, 0, 0.4);
 }
 
 #red {
@@ -31,9 +31,9 @@ h1 {
    background-color: red;
    width: 150px;
    height: 150px;
-   opacity: 0.4; 
    border-width: 4px;
    border-style: solid;
+   background: rgba(255, 0, 0, 0.4);
 }
 
 #yellow {
@@ -41,7 +41,7 @@ h1 {
    background-color: yellow;
    width: 150px;
    height: 150px;
-   opacity: 0.4; 
+   background: rgba(255, 255, 0, 0.4);
 }
 
 #blue {
@@ -49,21 +49,49 @@ h1 {
    background-color: blue;
    width: 150px;
    height: 150px;
-   opacity: 0.4; 
+   background: rgba(0, 0, 255, 0.4);
+}
+
+#green.light {
+   background: rgba(0, 204, 0, 1);
+
+}
+
+#red.light {
+   background: rgba(255, 0, 0, 1);
+}
+
+#yellow.light {
+   background: rgba(255, 255, 0, 1);
+}
+
+#blue.light {
+   background: rgba(0, 0, 255, 1);
 }
 
 .square {
    border-width: 4px;
    border-style: solid;
-
 }
 
-.light {
-   opacity: 1 !important;
-   background: rgba(0, 0, 0, 1);
+#start_button {
+   font-size: 20px;
+   margin-top:5px;
+}
+
+#turn {
+   margin: 0;
 }
 
 #controls {
    margin: 0 auto;
    text-align: center;
+   display: relative;
+   border-width: 2px;
+   border-style: solid;
+   width: 314px;
+   height: 100px;
 }
+
+
+
